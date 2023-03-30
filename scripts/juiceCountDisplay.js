@@ -14,7 +14,12 @@ function UpdateCountDisplay()
     juiceSubInfo.textContent = numOfSubs;
 
     //Now generate a small secret message.
-    if (numOfSubs > 1 && numOfSubs <= 10)
+    if (numOfSubs == 0)
+    {
+        specialMess.textContent = "Thank you for visiting the site!";
+    }
+
+    else if (numOfSubs < 10)
     {
         specialMess.textContent = "Thank you so much!";
     }
