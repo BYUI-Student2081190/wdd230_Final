@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bountiful Foods-About Us</title>
+
+    <!--Icon-->
+    <link rel="icon" href="Bountifulfoods-Icon.png">
+
+    <!--Style Sheets-->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Sono&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <!--Page Header-->
+    <header>
+
+        <!--Logo-->
+        <a id="logo" href="index.html">
+
+            <picture>
+
+                <!--Large Screen-->
+                <source srcset="images/Bountifulfoods-logo.png" media="(min-width: 1100px)">
+
+                <!--Medium & Small Screens-->
+                <img src="images/Bountifulfoods_small&med-logo.png" alt="Bountiful Foods Logo">
+
+            </picture>
+
+        </a>
+
+        <!--Nav Bar w Hamburger-->
+        <nav>
+
+            <button id="hamburger">&#9776;</button>
+
+            <ul id="navigation">
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="fresh.html">Fresh</a></li>
+                <li class="active"><a href="aboutus.html">About Us</a></li>
+
+            </ul>
+
+        </nav>
+
+        <!--Buisness Information-->
+        <section>
+
+            <!--Contains the Buisness Info-->
+            <h1>Bountiful Foods</h1>
+
+            <div>
+                <h2>+1 (111) 111-1111</h2>
+                <h2>bountifulfoods@fakeemail.com</h2>
+            </div>
+
+            <!--Holds the social media images-->
+            <div id="social">
+
+                <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="Facebook Icon"></a>
+                <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="Instagram Icon"></a>
+                <a href="https://twitter.com/"><img src="images/twitter.png" alt="Twitter Icon"></a>
+
+            </div>
+
+        </section>
+
+    </header>
+    
+    <!--Page Body-->
+    <main class="aboutus">
+
+        <!--Intro Picture Jam Jars-->
+        <picture id="mainAUPic">
+            <img src="images/place_holder.jpg" data-src="images/jamJars_aboutus.jpg" alt="Jam Jars">
+        </picture>
+
+        <!--Goes over picture-->
+        <h1>About Us</h1>
+
+        <!--About the Company-->
+        <div id="aboutUsDiv">
+            <h3>A little About Us</h3>
+            <p>Here at Bountiful Foods our highest priority is to
+                help people become their most healthy selves. We value
+                individuals and families who strive to make a better world
+                around them. This can all start with a better diet. We want
+                to help everyone with their desire to become a better "them".
+            </p>
+            <p>We were started on humble grounds, with family being the core of
+                everything we did. Our buisness is fresh good food, that is all run
+                and produced by our family. We desire to help you and your family,
+                because our family has been so blessed. Let's all eat healthy, and be
+                better together.
+            </p>
+            <picture>
+                <img src="images/place_holder.jpg" data-src="images/youngGirlsWalking-aboutus.jpg" alt="Girls Walking">
+            </picture>
+        </div>
+
+        <!--Google Maps-->
+        <div id="googleMap">
+            <p>Map of Carlsbad, CA</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62215.15422583691!2d-117.34071121673492!3d33.125378034932275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc73453f3bee59%3A0xa4cb5592fcf65d2f!2sCarlsbad%2C%20CA!5e0!3m2!1sen!2sus!4v1680160928458!5m2!1sen!2sus" width="350" height="350" style="border:2px soild #27343e;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!--Contact Info-->
+        <div id="aboutUsContact">
+            <h3>Contact Us</h3>
+            <h3>+1 (111) 111-1111</h3>
+            <h3>bountifulfoods@fakeemail.com</h3>
+            <h3>12345 S. FakeStreet, Carlsbad, CA, 92008</h3>
+        </div>
+
+    </main>
+
+    <!--Page Footer-->
+    <footer>
+
+        <!--Weather Card-->
+        <div id="weatherCard">
+            
+            <!--TopSection-->
+            <section>
+            <!--Curent Weather Image-->
+            <img id="currentWeatherImage" src="" alt="">
+
+            <!--Weather Descript-->
+            <h2 id="weatherDescript">n/a</h2>
+            <!--Temp-->
+            <h2><span id="temp"></span>&deg;F</h2>
+            <!--Humidity-->
+            <h2>Humidity: <span id="humidity"></span>%</h2>
+            </section>
+
+            <!--In between the two sections-->
+            <h2>Three Day Forecast</h2>
+
+            <!--BottomSection-->
+            <section id="weatherBottom">    
+                <!--Divs to represent the 3
+                day forcast. Each div will have an
+                image, and a temp. Similar to the top section.-->
+            </section>
+
+            <h3>Weather -- OpenWeather.org</h3>
+        </div>
+
+        <!--Rest of Footer Information-->
+        <div>
+
+            <!--Resources-->
+            <h2>Resources:</h2>
+            <h3>Images -- <a href="https://www.canva.com/">Canva.com</a></h3>
+            <h3>Weather -- <a href="https://openweathermap.org/">OpenWeather.org</a></h3>
+            <h3>Fruit Info -- <a href="https://brotherblazzard.github.io/canvas-content/fruit.json">FruitData.JASON</a></h3>
+
+            <!--Page UpdateTime-->
+            <h4>Page Update Time: <span id="updateTime"></span></h3>
+        </div>
+
+    </footer>
+
+    <!--Scripts-->
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/pageUpdateTime.js"></script>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/lazyLoader.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bountiful Foods-Fresh</title>
+
+    <!--Icon-->
+    <link rel="icon" href="Bountifulfoods-Icon.png">
+
+    <!--Style Sheets-->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Sono&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <!--Page Header-->
+    <header>
+
+        <!--Logo-->
+        <a id="logo" href="index.html">
+
+            <picture>
+
+                <!--Large Screen-->
+                <source srcset="images/Bountifulfoods-logo.png" media="(min-width: 1100px)">
+
+                <!--Medium & Small Screens-->
+                <img src="images/Bountifulfoods_small&med-logo.png" alt="Bountiful Foods Logo">
+
+            </picture>
+
+        </a>
+
+        <!--Nav Bar w Hamburger-->
+        <nav>
+
+            <button id="hamburger">&#9776;</button>
+
+            <ul id="navigation">
+
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="fresh.html">Fresh</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+
+            </ul>
+
+        </nav>
+
+        <!--Buisness Information-->
+        <section>
+
+            <!--Contains the Buisness Info-->
+            <h1>Bountiful Foods</h1>
+
+            <div>
+                <h2>+1 (111) 111-1111</h2>
+                <h2>bountifulfoods@fakeemail.com</h2>
+            </div>
+
+            <!--Holds the social media images-->
+            <div id="social">
+
+                <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="Facebook Icon"></a>
+                <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="Instagram Icon"></a>
+                <a href="https://twitter.com/"><img src="images/twitter.png" alt="Twitter Icon"></a>
+
+            </div>
+
+        </section>
+
+    </header>
+    
+    <!--Page Body-->
+    <main class="fresh">
+    
+        <!--Fresh Screen Picture-->
+        <picture>
+            <img src="images/place_holder.jpg" data-src="images/basketOfFruits_fresh.jpg" alt="Baskets of Fruits">
+        </picture>
+
+        <h1>Create Your Juice!</h1>
+        <p>To create a juice you put in your contact info, add
+            select three fruits you would like mixed into a juice!
+            Create your dream juice!!
+        </p>
+
+        <!--Form that you create your Juice.-->
+        <form method="dialog" id="juiceForm">
+
+            <!--First FeildSet will be User Info-->
+            <fieldset>
+                <legend>Your Contact Information</legend>
+                <label class="contactInfo">First Name* <input id="name" type="text" name="name" required></label>
+                <label class="contactInfo">Email* <input id="email" type="email" name="email" required placeholder="123@email.com"></label>
+                <label class="contactInfo">Phone Number* <input id="phoneNum" type="tel" title="Must be ten characters long, and only have numbers." name="phone" placeholder="1111111111" pattern="[0-9]{10}"></label>
+            </fieldset>
+
+            <!--The Second will be the Fruits-->
+            <fieldset>
+                <legend>Fruit Selection</legend>
+                <label class="fruitSelect">Fruit #1 <select id="fruitOne" required></select></label>
+                <label class="fruitSelect">Fruit #2 <select id="fruitTwo" required></select></label>
+                <label class="fruitSelect">Fruit #3 <select id="fruitThree" required></select></label>
+            </fieldset>
+
+            <!--The final fieldset will be Additional Info.-->
+            <fieldset>
+                <legend>Additional Info</legend>
+                <label class="additionalInfo">Extra Instructions for the Juice?</label>
+                <textarea id="extraInstruc" type="text" name="specialInstruc"></textarea>
+            </fieldset>
+
+            <!--Submit Button-->
+            <input type="submit" value="Juice Order" id="freshSubButton">
+
+        </form>
+
+        <!--Output Display-->
+        <div id="freshDisplay">
+            <!--Stuff will get added here through JS.-->
+        </div>
+
+    </main>
+
+    <!--Page Footer-->
+    <footer>
+
+        <!--Weather Card-->
+        <div id="weatherCard">
+            
+            <!--TopSection-->
+            <section>
+            <!--Curent Weather Image-->
+            <img id="currentWeatherImage" src="" alt="">
+
+            <!--Weather Descript-->
+            <h2 id="weatherDescript">n/a</h2>
+            <!--Temp-->
+            <h2><span id="temp"></span>&deg;F</h2>
+            <!--Humidity-->
+            <h2>Humidity: <span id="humidity"></span>%</h2>
+            </section>
+
+            <!--In between the two sections-->
+            <h2>Three Day Forecast</h2>
+
+            <!--BottomSection-->
+            <section id="weatherBottom">    
+                <!--Divs to represent the 3
+                day forcast. Each div will have an
+                image, and a temp. Similar to the top section.-->
+            </section>
+
+            <h3>Weather -- OpenWeather.org</h3>
+        </div>
+
+        <!--Rest of Footer Information-->
+        <div>
+
+            <!--Resources-->
+            <h2>Resources:</h2>
+            <h3>Images -- <a href="https://www.canva.com/">Canva.com</a></h3>
+            <h3>Weather -- <a href="https://openweathermap.org/">OpenWeather.org</a></h3>
+            <h3>Fruit Info -- <a href="https://brotherblazzard.github.io/canvas-content/fruit.json">FruitData.JASON</a></h3>
+
+            <!--Page UpdateTime-->
+            <h4>Page Update Time: <span id="updateTime"></span></h3>
+        </div>
+
+    </footer>
+
+    <!--Scripts-->
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/pageUpdateTime.js"></script>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/lazyLoader.js"></script>
+    <script src="scripts/fruitJSON.js"></script>
+    <script src="scripts/juiceCountGet.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,492 @@
+/*A few Goals this project, keep everything simple*/
+
+/*Google Fonts used on Site*/
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Sono&display=swap');
+
+/*How to call the fonts
+
+font-family: 'Dosis', sans-serif;
+font-family: 'Sono', sans-serif;
+
+*/
+
+/*Font Styles (Shared between Pages)*/
+h1{
+    size: 30px;
+    font-family: 'Dosis', sans-serif;
+    color: #27343e;
+}
+
+h2{
+    size: 25px;
+    font-family: 'Dosis', sans-serif;
+    color: #73ba83;
+}
+
+h3{
+    size: 23px;
+    font-family: 'Sono', sans-serif;
+    color: #27343e;
+}
+
+p{
+    size: 18px;
+    font-family: 'Sono', sans-serif;
+    color: #27343e;
+}
+
+/*Page Header Style (Shared between Pages)*/
+header{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0;
+    background-color: #73ba83;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    border-bottom: 2px solid #27343e;
+}
+
+/*Logo*/
+header #logo{
+    display: none;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-self: unset;
+    margin-top: 0;
+    text-decoration: none;
+    background-color: transparent;
+    width: 0;
+    height: 0;
+    text-align: unset;
+    border: none;
+}
+
+header #logo picture img{
+    margin-top: 1.9em;
+    border: none;
+}
+
+/*Nav*/
+header nav{
+    justify-self: unset;
+    margin-right: 0;
+    margin-top: 1em;
+    margin-left: 5vw;
+    margin-bottom: 2em;
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+
+header nav button{
+    display: block;
+    width: 45px;
+    height: 45px;
+    padding-right: 92%;
+    font-size: 2em;
+    font-family: 'Sono', sans-serif;
+    color: #27343e;
+    background-color: #ffff;
+    border: 1px solid #27343e;
+}
+
+header nav button.open{
+    background-color: #ede8e8;
+}
+
+header nav ul{
+    display: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul.open{
+    display: block;
+}
+
+header nav ul li{
+    list-style: none;
+    background-color: #c01414;
+    border: 2px solid #27343e;
+    padding: 0.7em;
+    margin: 0; 
+    margin-right: 6%;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    font-size: 35px;
+    color: #ffff;
+}
+
+header nav ul.open li a{
+    display: block;
+}
+
+header nav ul li.active a{
+    text-decoration: underline;
+}
+
+header nav ul li:hover{
+    background-color: #8b0000;
+}
+
+/*Buisness Info*/
+header section{
+    text-align: center;
+    margin-right: 5vw;
+    margin-left: 5vw;
+    background-color: #c01414;
+    border: 2px solid #27343e;
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+
+header section h1,
+header section h2{
+    color: #ffff;
+}
+
+header div#social a{
+    margin: 0.2em 1em;
+}
+
+header div#social a img:hover{
+    box-shadow: 6px 4px 7px 1px #27343e;
+    border: 2px solid #ffff;
+}
+
+header div#social a img{
+    border-radius: 35px;
+    width: 55px;
+    border: 1px solid #27343e;
+}
+
+/*Page Footer Style (Shared between Pages)*/
+footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #73ba83;
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+footer h2,
+footer h3,
+footer h4{
+    margin-left: 2vw;
+    color: #ffff;
+}
+
+footer h2{
+    margin-top: 0.4em;
+}
+
+footer h4{
+    size: 23px;
+    font-family: 'Sono', sans-serif;
+}
+
+footer a{
+    color: #4f4ff1;
+}
+
+footer a:hover{
+    color: #ffff;
+}
+
+footer div{
+    padding-top: 12em;
+    text-align: center;
+}
+
+footer div#weatherCard{
+    width: 350px;
+    background-color: #c01414;
+    border: 2px solid #27343e;
+    padding-top: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+footer section{
+    text-align: center;
+    background-color: white;
+    margin: 2em;
+    padding-bottom: 1em;
+    border: 2px solid #27343e;
+}
+
+footer section h2{
+    color: #27343e;
+    margin: 20px;
+}
+
+footer section #weatherDescript{
+    text-transform: capitalize;
+}
+
+footer section img{
+    width: 150px;
+}
+
+footer section#weatherBottom{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    background-color: #8b0000;
+    border: 2px solid #27343e;
+}
+
+footer section#weatherBottom div{
+    width: 100px;
+    height: 100px;
+    background-color: #ffff;
+    margin-top: 1em;
+    border: 2px solid #27343e;
+    padding-top: 0;
+}
+
+footer section#weatherBottom div img{
+    width: 50px;
+}
+
+/*Page Body Structure (Shared between Pages)*/
+main picture img[data-src]{
+    filter: blur(0.5em);
+}
+
+main picture img{
+    filter: blur(0em);
+    transition: filter 0.8s;
+    margin-top: 0.9em;
+    border: 2px solid #27343e;
+}
+
+/*Each Main page will share the same margin*/
+main{
+    margin: 0;
+}
+
+/*Home Page Body*/
+main.home{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 0.2fr);
+}
+
+main.home div{
+    margin: 2em;
+    text-align: center;
+    background-color: #c01414;
+    border: 2px solid #27343e;
+}
+
+main.home div h3,
+main.home div p{
+    color: white;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+main.home #homePicBlock{
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+main.home #homePicBlock img{
+    width: 300px;
+}
+
+main.home div#coastalArea{
+    grid-column: 1/3;
+    grid-row: 2/3;
+    padding-bottom: 1em;
+}
+
+main.home div#coastalArea picture img{
+    width: 150px;
+}
+
+main.home div#juiceCallToAction{
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    padding-bottom: 1em;
+}
+
+main.home div#juiceCallToAction picture img{
+    width: 150px;
+    margin: 2em;
+}
+
+main.home div#juiceCallToAction a{
+    margin: 2em;
+    color: #f2ffb0;
+    font-size: 24px;
+    font-family: 'Sono', sans-serif;
+}
+
+main.home div#juiceCallToAction a:hover{
+    color: #ffffff;
+}
+
+main.home div#submitTimes{
+    grid-column: 1/3;
+    grid-row: 4/5;
+    width: 80%;
+}
+
+/*Fresh Page Body*/
+main.fresh{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    margin: 1.3em;
+}
+
+main.fresh picture img{
+    width: 200px;
+}
+
+main.fresh form#juiceForm{
+    text-align: left;
+}
+
+main.fresh form fieldset{
+    font-family: 'Sono', sans-serif;
+    margin-bottom: 3em;
+    margin-top: 2em;
+    border: 2px solid #27343e;
+    border-radius: 10px;
+    display: block;
+    display: flex;
+    flex-direction: column;
+}
+
+main.fresh form fieldset legend{
+    font-size: 25;
+    font-family: 'Dosis', sans-serif;
+}
+
+main.fresh form fieldset label.contactInfo,
+main.fresh form fieldset label.fruitSelect,
+main.fresh form fieldset label.additionalInfo{
+    font-size: 20px;
+    margin: 1em 0 1em 1vw;
+}
+
+main.fresh form fieldset label.contactInfo input{
+    width: 80%;
+    margin-right: 3em;
+}
+
+main.fresh form fieldset label.fruitSelect select{
+    width: 50%;
+}
+
+main.fresh form fieldset textarea{
+    height: 15em;
+    margin: 1em;
+}
+
+main.fresh form input#freshSubButton{
+    font-family: 'Dosis', sans-serif;
+    font-size: 25px;
+    padding: 0.5em;
+    border-radius: 10px;
+    border: 2px solid #27343e;
+    color: #ffff;
+    background-color: #c01414;
+}
+
+main.fresh form input#freshSubButton:hover{
+    background-color: #8b0000;
+}
+
+main.fresh div{
+    display: none;
+}
+
+main.fresh div.active{
+    display: block;
+    background-color: #c01414;
+    border: 2px solid #27343e;
+    margin-top: 2em;
+    padding: 1em;
+}
+
+main.fresh div h3{
+    margin-top: 0.3em;
+    color: #ffff;
+}
+
+main.fresh div p{
+    color: #ffff;
+}
+
+
+/*AboutUs Page Body*/
+main.aboutus{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+}
+
+main.aboutus picture#mainAUPic{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    margin-bottom: 1em;
+}
+
+main.aboutus h1{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    z-index: 2;
+    color: #ffff;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+main.aboutus picture img{
+    width: 350px;
+}
+
+main.aboutus div{
+    text-align: center;
+    margin: 1em;
+}
+
+main.aboutus div#aboutUsDiv{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding: 2em;
+    background-color: #c01414;
+    border: 2px solid #27343e;
+}
+
+main.aboutus div#aboutUsDiv h3,
+main.aboutus div#aboutUsDiv p{
+    color: white;
+}
+
+main.aboutus div#aboutUsDiv picture img{
+    width: 250px;
+}
+
+main.aboutus div#googleMap{
+    grid-column: 1/3;
+    grid-row: 4/5;
+}
+
+main.aboutus div#googleMap p{
+    margin-top: 0;
+}
+
+main.aboutus div#aboutUsContact{
+    grid-column: 1/3;
+    grid-row: 3/4;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
